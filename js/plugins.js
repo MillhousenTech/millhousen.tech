@@ -1,5 +1,5 @@
 // Avoid `console` errors in browsers that lack a console.
-(function() {
+(function () {
     var method;
     var noop = function () {};
     var methods = [
@@ -22,3 +22,44 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+
+// jQuery Smooth Scrolling Internal Page Jump
+
+$(function () {
+    $('a[href*=#]:not([href=#])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});
+
+// browser-update.org
+var $buoop = {
+    c: 2
+};
+
+function $buo_f() {
+    var e = document.createElement("script");
+    e.src = "//browser-update.org/update.js";
+    document.body.appendChild(e);
+};
+try {
+    document.addEventListener("DOMContentLoaded", $buo_f, false)
+} catch (e) {
+    window.attachEvent("onload", $buo_f)
+}
+
+// typed.js
+$(function () {
+    $(".name").typed({
+        strings: ["First sentence.", "Second sentence."],
+        typeSpeed: 0
+    });
+});

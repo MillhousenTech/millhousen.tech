@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Kenny Stier -- Creator, Designer, and Developer -- @kestier19
 
 # THANKS
 
-    <name>
+    Initializr
 
 # TECHNOLOGY COLOPHON
 
