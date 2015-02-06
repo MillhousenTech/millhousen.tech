@@ -11,6 +11,10 @@ body {
     text-align: center;
 }
 
+.name {
+    display: inline;
+}
+
 .typed-cursor {
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
