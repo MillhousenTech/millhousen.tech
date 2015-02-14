@@ -23,23 +23,6 @@
 
 // Place any jQuery/helper plugins in here.
 
-// jQuery Smooth Scrolling Internal Page Jump
-
-$(function () {
-    $('a[href*=#]:not([href=#])').click(function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html,body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
-            }
-        }
-    });
-});
-
 // browser-update.org
 var $buoop = {
     c: 2
@@ -58,8 +41,14 @@ try {
 
 // typed.js
 $(function () {
-    $(".name").typed({
-        strings: ["First sentence.", "Second sentence."],
-        typeSpeed: 0
+    $(".about").typed({
+        strings: ["I'm a Linux enthusiast.", "I'm a web developer.", "I'm a Bash scripter.", "I'm a system administrator.", "I'm a Hoosier.", "I'm an Android fan.", "I'm a bad artist.", "I love good design.", "I'm a Trenta developer.",],
+        typeSpeed: 50,
+        backDelay: 1500,
+        loop: true,
+        loopCount: false,
     });
 });
+
+// Bitcoin Address Alert
+function bitcoinAddress(){   var address = prompt("Donate Bitcoins to: ", "1QECq8TRfgt5N44ykrSc7hnf3P3z5V6TcJ");}

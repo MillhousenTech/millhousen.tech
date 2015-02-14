@@ -14,9 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -25,36 +24,55 @@
 </head>
 
 <body>
+    <div class="content">
+        <div class="avatar"><img src="http://www.gravatar.com/avatar/e141b81a87f261db22bb6bb50b76e787?s=150" alt="Avatar" />
+        </div>
+        <div class="name">
+            <h1>Hi, I'm Kenny Stier.</h1>
+        </div>
+        <div class="about"></div>
+        <div class="accounts">
+            <a title="Stack Exchange" href="https://stackexchange.com/users/3305339/millhousen-tech?tab=accounts"><i class="fa fa-stack-exchange"></i></a>
+            <a title="Bitcoin" onclick="bitcoinAddress()"><i class="fa fa-btc"></i></a>
+            <a title="Google Plus" href="https://plus.google.com/+KennyStier/"><i class="fa fa-google-plus"></i></a>
+            <a title="Twitter" href="https://twitter.com/kestier19"><i class="fa fa-twitter"></i></a>
+            <a title="Wikipedia" href="https://en.wikipedia.org/wiki/User:19kestier"><i class="fa fa-wikipedia"></i></a>
+            <a title="GitHub" href="https://github.com/19kestier"><i class="fa fa-github"></i></a>
+            <a title="Wordpress" href="http://stier.linuxfaq.org/wordpress"><i class="fa fa-wordpress"></i></a>
+            <a title="Pandora" href="https://www.pandora.com/profile/kenny.stier19"><i class="fa fa-pandora"></i></a>
+	    <a title="Last.fm" href="http://www.last.fm/user/kestier19"><i class="fa fa-lastfm"></i></a>
+	    <a title="Email" href="mailto:kenny.stier19@gmail.com"><i class="fa fa-envelope-o"></i></a>
+	    <a title="Duolingo" href="https://www.duolingo.com/KennyStier"><i class="fa fa-language"></i></a>
+        </div>
 
-    <div class="name"></div>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
 
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
-    <!-- Piwik -->
-    <script type="text/javascript">
-        var _paq = _paq || [];
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function () {
-            var u = "//stier.linuxfaq.org/piwik/";
-            _paq.push(['setTrackerUrl', u + 'piwik.php']);
-            _paq.push(['setSiteId', 4]);
-            var d = document,
-                g = d.createElement('script'),
-                s = d.getElementsByTagName('script')[0];
-            g.type = 'text/javascript';
-            g.async = true;
-            g.defer = true;
-            g.src = u + 'piwik.js';
-            s.parentNode.insertBefore(g, s);
-        })();
-    </script>
-    <noscript>
-        <p><img src="//stier.linuxfaq.org/piwik/piwik.php?idsite=4" style="border:0;" alt="" />
-        </p>
-    </noscript>
-    <!-- End Piwik Code -->
+        <!-- Piwik -->
+        <script type="text/javascript">
+            var _paq = _paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function () {
+                var u = "//stier.linuxfaq.org/piwik/";
+                _paq.push(['setTrackerUrl', u + 'piwik.php']);
+                _paq.push(['setSiteId', 4]);
+                var d = document,
+                    g = d.createElement('script'),
+                    s = d.getElementsByTagName('script')[0];
+                g.type = 'text/javascript';
+                g.async = true;
+                g.defer = true;
+                g.src = u + 'piwik.js';
+                s.parentNode.insertBefore(g, s);
+            })();
+        </script>
+        <noscript>
+            <p><img src="//stier.linuxfaq.org/piwik/piwik.php?idsite=4" style="border:0;" alt="" />
+            </p>
+        </noscript>
+        <!-- End Piwik Code -->
+    </div>
 </body>
 
 </html>

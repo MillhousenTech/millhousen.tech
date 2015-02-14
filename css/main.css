@@ -1,18 +1,48 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+@font-face {
+    font-family: 'Linux Libertine';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Linux Libertine'), url(//brick.a.ssl.fastly.net/fonts/linuxlibertine/400.woff) format('woff');
+}
+
 body {
     height: 100vh;
     width: 100vw;
     background-color: #0099CC;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Noto Sans', 'Open Sans', sans-serif;
     color: white;
+    position: relative;
+    text-align: center;
+}
+
+.content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
 }
 
-.name {
+.name h1 {
+    margin: 0.25em;
+}
+
+.accounts {
+    margin: 0.25em;
+}
+
+.accounts i {
+    margin: 0.25em;
+    font-size: 1.8em;
+    color: white;
+}
+
+.about {
     display: inline;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 .typed-cursor {
@@ -20,6 +50,9 @@ body {
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
+    font-size: 2em;
+    margin: 0.67em 0;
+    display: inline;
 }
 
 @keyframes blink {
@@ -56,4 +89,35 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    background: url(http://www.gravatar.com/avatar/e141b81a87f261db22bb6bb50b76e787?s=150) no-repeat;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    margin: 0 auto;
+    margin-bottom: 0.7em;
+}
+
+.avatar img {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.fa-wikipedia:before {
+    font-family: 'Linux Libertine', 'Times New Roman', Times, serif;
+    font-weight: 400;
+    content: "W";
+}
+
+.fa-pandora:before {
+    font-family: 'Linux Libertine', 'Times New Roman', Times, serif;
+    font-weight: 400;
+    content: "P";
 }
