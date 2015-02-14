@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+@import url(//fonts.googleapis.com/css?family=Roboto:400,300);
 @font-face {
     font-family: 'Linux Libertine';
     font-style: normal;
@@ -97,7 +97,7 @@ body {
     border-radius: 150px;
     -webkit-border-radius: 150px;
     -moz-border-radius: 150px;
-    background: url(http://www.gravatar.com/avatar/e141b81a87f261db22bb6bb50b76e787?s=150) no-repeat;
+    background: url(//www.gravatar.com/avatar/e141b81a87f261db22bb6bb50b76e787?s=150) no-repeat;
     box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
     -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
