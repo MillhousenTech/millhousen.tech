@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/mtdev
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://19kestier.github.io
+  * I am mtdev (https://keybase.io/mtdev) on keybase.
+  * I have a public key with fingerprint 97B0 FC42 86A3 15EE F776  FD00 F2F9 4D4F 45FA FE62
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "97b0fc4286a315eef776fd00f2f94d4f45fafe62",
+            "host": "keybase.io",
+            "key_id": "f2f94d4f45fafe62",
+            "kid": "01010804eede42c1865a6bbb39d14f21a186b113bef85e31c3257ae0d53072ef1b8e0a",
+            "uid": "e8a47a172f8e9f7297e9756c688c9919",
+            "username": "mtdev"
+        },
+        "service": {
+            "hostname": "19kestier.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1427214320,
+    "expire_in": 157680000,
+    "prev": "91bfe6d22c604dede23065668edc8943abf835e7f09ba2a2f1d10731c704ff7a",
+    "seqno": 6,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.8
+Comment: https://keybase.io/crypto
+
+yMIjAnicbVJbSFRBGF6zC24oBmlIkXYoQlvtzJz7+hBkXiJLTbqYoZw5Z8Y9bHtx
+93hDlygoAtMUrAgsrYeCJCwJ6iWoLC27KOqLSaZFaZqVUZAS1hyzt2Yehvn+7//m
+/7/5H0WG2+xh32Z356TPzaOwZw/Sy2z7Vp35Ws0gn17FOKsZN144iOEtwQF/wPCa
+jJNRJMQSjYeyqHJAwJhIkkh0liWQKLzOE14gKsEiZByMyxe0MqgMUoM4xfBRjF6K
+DZ2i/+G7FwIsoFtmeYx1zEMNyKKgigghTtEBTyBQKYIA4BAmsoA5oHFQkFTM6gLH
+ShATgGTMqlSubEEOyyovqUCCRMYKkaAiYUUSRE2UZU1RgGIRgzjgVT2Ysj2mjsuZ
+kIOhULmhYat/q43FMFDcOGgaOJBSYpiuMvS3J3/AZ/o03xFKcJmmP+i0BMwqv5VR
+gVHxolYxMrw69ZJmlONA0PB5GSegTM00LHHAQwkCnoOsg8GVfiOAiw2LIUiizNJl
+vUNroz8AEDVMh1ATWV6nLkGOFQVRlLGuyQrPqYjInIAlwipIhSokQAesRI2SWJ4Q
+ybImiEu9PsYp0jLVEioZNEq8qlkWwEzo4f3DS21hdtvyZUusabDZI6L/zcipyyvm
+N06sex77M9Q5GrcrLVTQ+nS89tc448it01prHk8f33OuIqdI7+4bcDfEwaxJsKUm
+f6io/MPchUzPfFN7eOM2T3+LJ7En49LKYzCjENdmnk1ITkzbWX91+E6S2T7SVDr2
+MuFk/8FPw7fg7Nu89X0VU21Rr6beu9aOxPSe39rZrIvN0dMdg432N99rDwxqjh+F
+MQMDsTc2tNzLiI/sup38pCF88+ec3Hd119pSX+89sWNsKHFNxM1sZ8/18G6Ga767
+OrU3e/Kip3Zk5kqp7AwNdVR+6Rfis6IKUrbXn56fyeh25fxO2gTb4nqi+0tHRkcn
+cueOfnShriwynH9ov/Air+UPC0syPQ==
+=O+Bl
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/mtdev
+
+==================================================================
