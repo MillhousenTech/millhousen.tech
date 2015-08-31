@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+
+if (position.coords.latitude > 39.205105 && position.coords.latitude < 39.208854 && position.coords.longitude > -85.579982 && position.coords.longitude < -85.575347) {
+    x.innerHTML = "You are at school!";        
+}
+else if (position.coords.latitude > 39.380788 && position.coords.latitude < 39.385719 && position.coords.longitude > -85.479461 && position.coords.longitude < -85.474781) {
+    x.innerHTML = "You are at school!";        
+}
+
+else {
+    x.innerHTML = "You are not at school!";
+}
+}
+getLocation()
+</script>
+
+</body>
+</html>
