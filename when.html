@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>How Much Longer?</title>
+</head>
+
+<body>
+        <div id="timeUntil">
+        </div>
+        <script src=
+        "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/livestamp/1.1.2/livestamp.min.js"></script>
+        <script>
+function showTimeUntil(){
+        var div = document.getElementById("timeUntil");
+        // Define Weekdays, and Early Release Days
+        var dayOfWeek = moment().format('dddd');
+        if (dayOfWeek == "Monday" || "Tuesday" || "Wednesday" || "Thursday" || "Friday") {
+        weekday = true;}
+        else if (dayOfWeek = "Saturday" || "Sunday") {
+        weekday = false;}
+        if (dayOfWeek == "Wednesday") {
+        earlyRelease = true;}
+        else {earlyRelease = false;}
+        // What period is it?
+        //   Is it a weekday?
+        if (weekday == true) {
+        //   Is it an early release day?
+        //     Time
+        var time = moment().format("HHmm");
+
+        if (earlyRelease == true) {
+
+        if (time > 0815 && time < 0857) {
+        var period = 1;
+        }
+        else if (time > 0901 && time < 0939) {
+        var period = 2;
+        }
+        else if (time > 0943 && time < 1000) {
+        var period = 3;
+        }
+        else if (time > 1004 && time < 1040) {
+        var period = 4;
+        }
+        else if (time > 1044 && time < 1118) {
+        var period = 8;
+        }
+        else if (time > 1122 && time < 1148) {
+        var period = 5;
+        }
+        else if (time > 1148 && time < 1216) {
+        var period = 0;
+        }
+        else if (time > 1220 && time < 1243) {
+        var period = 5;
+        }
+        else if (time > 1247 && time < 1340) {
+        var period = 6;
+        }
+        else if (time > 1344 && time < 1425) {
+        var period = 7;
+        }
+
+        } else if (earlyRelease == false) {
+
+        if (time > 0815 && time < 0900) {
+        var period = 1;
+        }
+        else if (time > 0904 && time < 0955) {
+        var period = 2;
+        }
+        else if (time > 0959 && time < 1024) {
+        var period = 3;
+        }
+        else if (time > 1028 && time < 1118) {
+        var period = 4;
+        }
+        else if (time > 1122 && time < 1148) {
+        var period = 5;
+        }
+        else if (time > 1148 && time < 1217) {
+        var period = 0;
+        }
+        else if (time > 1221 && time < 1243) {
+        var period = 5;
+        }
+        else if (time > 1247 && time < 1337) {
+        var period = 6;
+        }
+        else if (time > 1341 && time < 1431) {
+        var period = 7;
+        }
+        else if (time > 1435 && time < 1525) {
+        var period = 8;
+        }
+
+        }
+        }
+        if (period == 1 && earlyRelease == false) {
+        var releaseTime = "09:00";
+        }
+        else if (period == 1 && earlyRelease == true) {
+        var releaseTime = "08:52";
+        }
+        else if (period == 2 && earlyRelease == false) {
+        var releaseTime = "09:54";
+        }
+        else if (period == 2 && earlyRelease == true) {
+        var releaseTime = "09:38";
+        }
+        else if (period == 3 && earlyRelease == false) {
+        var releaseTime = "10:24";
+        }
+        else if (period == 3 && earlyRelease == true) {
+        var releaseTime = "10:00";
+        }
+        else if (period == 4 && earlyRelease == false) {
+        var releaseTime = "11:18";
+        }
+        else if (period == 4 && earlyRelease == true) {
+        var releaseTime = "10:40";
+        }
+        else if (period == 5 && time > 1122 && time < 1150) {
+        var releaseTime = "11:48";
+        }
+        else if (period == 5 && time > 1215 && time < 1243) {
+        var releaseTime = "12:43";
+        }
+
+        else if (period == 6 && earlyRelease == false) {
+        var releaseTime = "13:37";
+        }
+        else if (period == 6 && earlyRelease == true) {
+        var releaseTime = "13:40";
+        }
+        else if (period == 7 && earlyRelease == false) {
+        var releaseTime = "14:31";
+        }
+        else if (period == 7 && earlyRelease == true) {
+        var releaseTime = "14:25";
+        }
+        else if (period == 8 && earlyRelease == false) {
+        var releaseTime = "15:25";
+        }
+        else if (period == 8 && earlyRelease == true) {
+        var releaseTime = "11:18";
+        }
+        var iso8601 = moment().format("YYYY-MM-DD") + 'T' + releaseTime + ':00-04:00';
+        var insertHTML = '<p>We get out of here <span data-livestamp="' + iso8601 + '"><\/span>.<\/p>';
+        div.innerHTML = insertHTML;
+        setTimeout("showTimeUntil()",5000);}
+        showTimeUntil()
+        </script>
+</body>
+</html>
