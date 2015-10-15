@@ -1,16 +1,31 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
         <title>How Much Longer?</title>
+        <link href='https://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
+        <style>
+        body{
+        font-family: 'Orbitron', sans-serif;
+        background-color: black;
+        color: green;
+        font-size: 4em;
+        text-align:center;
+        }
+        #timeLeft {font-weight: bold;}
+        </style>
 </head>
 
 <body>
         <div id="timeUntil">
         </div>
+        <div id="clock">
+        </div>
         <script src=
-        "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/livestamp/1.1.2/livestamp.min.js"></script>
+        "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/livestamp/1.1.2/livestamp.min.js"></script>
         <script>
 function showTimeUntil(){
         var div = document.getElementById("timeUntil");
@@ -35,31 +50,31 @@ function showTimeUntil(){
         if (time > 0815 && time < 0857) {
         var period = 1;
         }
-        else if (time > 0901 && time < 0939) {
+        else if (time > 0858 && time < 0939) {
         var period = 2;
         }
-        else if (time > 0943 && time < 1000) {
+        else if (time > 0940 && time < 1000) {
         var period = 3;
         }
-        else if (time > 1004 && time < 1040) {
+        else if (time > 1001 && time < 1040) {
         var period = 4;
         }
-        else if (time > 1044 && time < 1118) {
+        else if (time > 1041 && time < 1118) {
         var period = 8;
         }
-        else if (time > 1122 && time < 1148) {
+        else if (time > 1119 && time < 1148) {
         var period = 5;
         }
-        else if (time > 1148 && time < 1216) {
+        else if (time > 1149 && time < 1216) {
         var period = 0;
         }
-        else if (time > 1220 && time < 1243) {
+        else if (time > 1217 && time < 1243) {
         var period = 5;
         }
-        else if (time > 1247 && time < 1340) {
+        else if (time > 1244 && time < 1340) {
         var period = 6;
         }
-        else if (time > 1344 && time < 1425) {
+        else if (time > 1341 && time < 1425) {
         var period = 7;
         }
 
@@ -68,31 +83,31 @@ function showTimeUntil(){
         if (time > 0815 && time < 0900) {
         var period = 1;
         }
-        else if (time > 0904 && time < 0955) {
+        else if (time > 0901 && time < 0955) {
         var period = 2;
         }
-        else if (time > 0959 && time < 1024) {
+        else if (time > 0956 && time < 1024) {
         var period = 3;
         }
-        else if (time > 1028 && time < 1118) {
+        else if (time > 1025 && time < 1118) {
         var period = 4;
         }
-        else if (time > 1122 && time < 1148) {
+        else if (time > 1119 && time < 1148) {
         var period = 5;
         }
-        else if (time > 1148 && time < 1217) {
+        else if (time > 1149 && time < 1217) {
         var period = 0;
         }
-        else if (time > 1221 && time < 1243) {
+        else if (time > 1218 && time < 1243) {
         var period = 5;
         }
-        else if (time > 1247 && time < 1337) {
+        else if (time > 1244 && time < 1337) {
         var period = 6;
         }
-        else if (time > 1341 && time < 1431) {
+        else if (time > 1338 && time < 1431) {
         var period = 7;
         }
-        else if (time > 1435 && time < 1525) {
+        else if (time > 1432 && time < 1525) {
         var period = 8;
         }
 
@@ -148,10 +163,16 @@ function showTimeUntil(){
         var releaseTime = "11:18";
         }
         var iso8601 = moment().format("YYYY-MM-DD") + 'T' + releaseTime + ':00-04:00';
-        var insertHTML = '<p>We get out of here <span data-livestamp="' + iso8601 + '"><\/span>.<\/p>';
+        var insertHTML = '<p>We get out of here <span id="timeLeft" data-livestamp="' + iso8601 + '"><\/span>.<\/p>';
         div.innerHTML = insertHTML;
-        setTimeout("showTimeUntil()",5000);}
+        setTimeout("showTimeUntil()",120000);}
         showTimeUntil()
-        </script>
+        function clock() {
+        var clock = document.getElementById("clock");
+        clock.innerHTML = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+        setTimeout("clock()",1000);
+        }
+        clock()        
+</script>
 </body>
 </html>
