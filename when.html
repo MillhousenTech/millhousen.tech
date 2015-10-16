@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,13 +23,17 @@
         </div>
         <div id="clock">
         </div>
+        <div id="period">
+        </div>
         <script src=
         "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/livestamp/1.1.2/livestamp.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
         <script>
 function showTimeUntil(){
         var div = document.getElementById("timeUntil");
+        var pd = document.getElementById("period");
         // Define Weekdays, and Early Release Days
         var dayOfWeek = moment().format('dddd');
         if (dayOfWeek == "Monday" || "Tuesday" || "Wednesday" || "Thursday" || "Friday") {
@@ -165,6 +170,8 @@ function showTimeUntil(){
         var iso8601 = moment().format("YYYY-MM-DD") + 'T' + releaseTime + ':00-04:00';
         var insertHTML = '<p>We get out of here <span id="timeLeft" data-livestamp="' + iso8601 + '"><\/span>.<\/p>';
         div.innerHTML = insertHTML;
+        var periodOrdinal = numeral(period).format('0o');
+        pd.innerHTML = "We are in " + periodOrdinal + " period.";
         setTimeout("showTimeUntil()",120000);}
         showTimeUntil()
         function clock() {
