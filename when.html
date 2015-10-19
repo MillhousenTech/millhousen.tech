@@ -1,35 +1,61 @@
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
         <title>How Much Longer?</title>
-        <link href='https://fonts.googleapis.com/css?family=Orbitron:400,700' rel='stylesheet' type='text/css'>
+<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Orbitron|Roboto+Mono' rel='stylesheet' type='text/css'>
         <style>
         body{
         font-family: 'Orbitron', sans-serif;
         background-color: black;
         color: green;
-        font-size: 4em;
-        text-align:center;
-        }
+        text-align:center;}
+        #clock{font-size:2em;}
+        #period {font-size:2em;}
+        #timeUntil {font-size: 3em;}
         #timeLeft {font-weight: bold;}
+        #clock {font-family: 'Roboto Mono';}
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  background-color: #000010;
+}
         </style>
 </head>
 
 <body>
         <div id="timeUntil">
         </div>
-        <div id="clock">
-        </div>
+ <footer class="footer">
+      <div class="container">
+<div class="col-md-6">
         <div id="period">
         </div>
+     </div>
+     <div class="col-md-6">
+        <p id="clock">
+        </p>
+     </div>     
+    </footer>
+     
+    
         <script src=
         "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/livestamp/1.1.2/livestamp.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.5.3/numeral.min.js"></script>
         <script>
 function showTimeUntil(){
         var div = document.getElementById("timeUntil");
@@ -171,12 +197,12 @@ function showTimeUntil(){
         var insertHTML = '<p>We get out of here <span id="timeLeft" data-livestamp="' + iso8601 + '"><\/span>.<\/p>';
         div.innerHTML = insertHTML;
         var periodOrdinal = numeral(period).format('0o');
-        pd.innerHTML = "We are in " + periodOrdinal + " period.";
+        pd.innerHTML = "<p>We are in " + periodOrdinal + " period.</p>";
         setTimeout("showTimeUntil()",120000);}
         showTimeUntil()
         function clock() {
         var clock = document.getElementById("clock");
-        clock.innerHTML = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+        clock.innerHTML = moment().format("h:mm:ss a");
         setTimeout("clock()",1000);
         }
         clock()        
