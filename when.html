@@ -63,6 +63,9 @@ body {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.5.3/numeral.min.js"></script>
         <script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
         <script>
+        // Force HTTP (insecure)
+        if (window.location.protocol != "http:"){
+    window.location.href = "http:" + window.location.href.substring(window.location.protocol.length);}
 function showTimeUntil(){
         var div = document.getElementById("timeUntil");
         var pd = document.getElementById("period");
