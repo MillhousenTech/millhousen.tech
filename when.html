@@ -1,10 +1,11 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-        <title>How Much Longer?</title>
-<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Orbitron|Roboto+Mono' rel='stylesheet' type='text/css'>
+    <head>
+        <title>
+            How Much Longer?
+        </title>
+        <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Orbitron|Roboto+Mono' rel='stylesheet' type='text/css'>
         <style>
         body{
         font-family: 'Orbitron', sans-serif;
@@ -16,57 +17,108 @@
         #timeUntil {font-size: 3em;}
         #timeLeft {font-weight: bold;}
         #clock {font-family: 'Roboto Mono';}
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  background-color: #000010;
-}
-        </style>
-</head>
+        /* Sticky footer styles
+        -------------------------------------------------- */
+        html {
+        position: relative;
+        min-height: 100%;
+        }
+        body {
+        /* Margin bottom by footer height */
+        margin-bottom: 60px;
+        }
+        .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        background-color: #000010;
+        }
 
-<body>
+        h5 {font-weight: bold;}
+        </style>
+    </head>
+    <body>
+        <!-- Modal -->
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal" type="button">&times;</button>
+                        <h4 class="modal-title">
+                            Secrets of When
+                        </h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <h5>
+                            Keyboard Shortcuts
+                        </h5>
+
+                        <p>
+                            Ctrl+Shift+[NUM] - Show/Hide Meme
+                        </p>
+
+                        <p>
+                            Ctrl+Shift+S - Play "Pretty Stupid"<sup>*</sup>
+                        </p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <sup>* Feature Coming Soon</sup> <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Modal -->
+
         <div id="timeUntil">
         </div>
-    <div id="content">
-        <div id="meme">
+
+        <div id="content">
+            <div id="meme">
+            </div>
         </div>
-    </div>
- <footer class="footer">
-      <div class="container">
-<div class="col-md-6">
-        <div id="period">
-        </div>
-     </div>
-     <div class="col-md-6">
-        <p id="clock">
-        </p>
-     </div>     
-    </footer>
-     
-    
-        <script src=
-        "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/livestamp/1.1.2/livestamp.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.5.3/numeral.min.js"></script>
-        <script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="col-md-4">
+                    <div id="period">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <svg data-target="#myModal" data-toggle="modal" style="width:36px;height:36px" viewbox="0 0 24 24">
+                    <path d="M15.07,11.25L14.17,12.17C13.45,12.89 13,13.5 13,15H11V14.5C11,13.39 11.45,12.39 12.17,11.67L13.41,10.41C13.78,10.05 14,9.55 14,9C14,7.89 13.1,7 12,7A2,2 0 0,0 10,9H8A4,4 0 0,1 12,5A4,4 0 0,1 16,9C16,9.88 15.64,10.67 15.07,11.25M13,19H11V17H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" fill="#008000">
+                    </path></svg>
+                </div>
+
+                <div class="col-md-4">
+                    <p id="clock">
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+        </script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js">
+        </script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/livestamp/1.1.2/livestamp.min.js">
+        </script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.5.3/numeral.min.js">
+        </script> 
+        <script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js">
+        </script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js">
+        </script> 
         <script>
         // Force HTTP (insecure)
         if (window.location.protocol != "http:"){
-    window.location.href = "http:" + window.location.href.substring(window.location.protocol.length);}
-function showTimeUntil(){
+        window.location.href = "http:" + window.location.href.substring(window.location.protocol.length);}
+        function showTimeUntil(){
         var div = document.getElementById("timeUntil");
         var pd = document.getElementById("period");
         // Define Weekdays, and Early Release Days
@@ -206,7 +258,7 @@ function showTimeUntil(){
         var insertHTML = '<p>We get out of here <span id="timeLeft" data-livestamp="' + iso8601 + '"><\/span>.<\/p>';
         div.innerHTML = insertHTML;
         var periodOrdinal = numeral(period).format('0o');
-        pd.innerHTML = "<p>We are in " + periodOrdinal + " period.</p>";
+        pd.innerHTML = "<p>We are in " + periodOrdinal + " period.<\/p>";
         setTimeout("showTimeUntil()",120000);}
         showTimeUntil()
         function clock() {
@@ -220,21 +272,21 @@ function showTimeUntil(){
         shortcut.add("Ctrl+Shift+1",function() {
 
             if ( $('#meme').children().length == 0 ) {
-	funnyMeme.innerHTML = "<img src='http://sdmemecentral.homenet.org/upload/2015/10/19/20151019151033-7094ed90.jpg'/>";
-}
+        funnyMeme.innerHTML = "<img src='http://sdmemecentral.homenet.org/upload/2015/10/19/20151019151033-7094ed90.jpg'/>";
+        }
            else if ( $('#meme').children().length > 0 ) {
-	funnyMeme.innerHTML = "";
-    }
+        funnyMeme.innerHTML = "";
+        }
         });
         shortcut.add("Ctrl+Shift+2",function() {
 
             if ( $('#meme').children().length == 0 ) {
-	funnyMeme.innerHTML = "<img src='http://sdmemecentral.homenet.org/upload/2015/10/14/20151014201055-22401635.jpg'/>";
-}
+        funnyMeme.innerHTML = "<img src='http://sdmemecentral.homenet.org/upload/2015/10/14/20151014201055-22401635.jpg'/>";
+        }
            else if ( $('#meme').children().length > 0 ) {
-	funnyMeme.innerHTML = "";
-    }
+        funnyMeme.innerHTML = "";
+        }
         });
-</script>
-</body>
+        </script>
+    </body>
 </html>
