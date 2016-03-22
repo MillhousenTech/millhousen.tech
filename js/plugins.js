@@ -51,4 +51,4 @@ $(function () {
 });
 
 // Bitcoin Address Alert
-function bitcoinAddress(){   var address = prompt("Donate Bitcoins to: ", "1QECq8TRfgt5N44ykrSc7hnf3P3z5V6TcJ");}
+function bitcoinAddress(){   var address = prompt("Donate Bitcoins to: ", "1BXDneR1MsMbZjnZRZL5UXyC9Z6j6eGknP");}
