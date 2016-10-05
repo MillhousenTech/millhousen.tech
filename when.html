@@ -258,7 +258,7 @@
         else if (period == 8 && earlyRelease == true) {
         var releaseTime = "11:18";
         }
-        var iso8601 = moment().format("YYYY-MM-DD") + 'T' + releaseTime + ':00-05:00';
+        var iso8601 = moment().format("YYYY-MM-DD") + 'T' + releaseTime + ':00-04:00';
         var insertHTML = '<p>We get out of here <span id="timeLeft" data-livestamp="' + iso8601 + '"><\/span>.<\/p>';
         div.innerHTML = insertHTML;
         var periodOrdinal = numeral(period).format('0o');
