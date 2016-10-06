@@ -119,9 +119,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js">
         </script> 
         <script>
-        // Force HTTP (insecure)
-        if (window.location.protocol != "http:"){
-        window.location.href = "http:" + window.location.href.substring(window.location.protocol.length);}
         function showTimeUntil(){
         var div = document.getElementById("timeUntil");
         var pd = document.getElementById("period");
@@ -210,22 +207,22 @@
         }
         }
         if (period == 1 && earlyRelease == false) {
-        var releaseTime = "09:00";
+        var releaseTime = "08:58:35";
         }
         else if (period == 1 && earlyRelease == true) {
-        var releaseTime = "08:52";
+        var releaseTime = "08:51:35";
         }
         else if (period == 2 && earlyRelease == false) {
-        var releaseTime = "09:54";
+        var releaseTime = "09:51:35";
         }
         else if (period == 2 && earlyRelease == true) {
-        var releaseTime = "09:38";
+        var releaseTime = "09:33:35";
         }
         else if (period == 3 && earlyRelease == false) {
-        var releaseTime = "10:24";
+        var releaseTime = "10:44:35";
         }
         else if (period == 3 && earlyRelease == true) {
-        var releaseTime = "10:00";
+        var releaseTime = "10:14:35";
         }
         else if (period == 4 && earlyRelease == false) {
         var releaseTime = "11:18";
@@ -258,7 +255,7 @@
         else if (period == 8 && earlyRelease == true) {
         var releaseTime = "11:18";
         }
-        var iso8601 = moment().format("YYYY-MM-DD") + 'T' + releaseTime + ':00-04:00';
+        var iso8601 = moment().format("YYYY-MM-DD") + 'T' + releaseTime + '-04:00';
         var insertHTML = '<p>We get out of here <span id="timeLeft" data-livestamp="' + iso8601 + '"><\/span>.<\/p>';
         div.innerHTML = insertHTML;
         var periodOrdinal = numeral(period).format('0o');
