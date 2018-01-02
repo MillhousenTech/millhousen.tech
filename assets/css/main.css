@@ -2583,7 +2583,7 @@
 			padding-left: 0.75em;
 		}
 
-			#footer .copyright li:first-child {
+			#footer .copyright li {
 				border-left: 0;
 				margin-left: 0;
 				padding-left: 0;
@@ -3156,3 +3156,12 @@
 			}
 
 	}
+
+.snippet-info {
+    margin: 10px;
+}
+
+.subtle {
+    font-size: 12px;
+    margin-top: -30px;
+}
