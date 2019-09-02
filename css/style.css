@@ -1,0 +1,11 @@
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .navbar-brand {
+            padding: 0px;
+        }
+
+        #portrait {
+            padding-right: 15px;
+        }
